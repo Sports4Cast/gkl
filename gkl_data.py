@@ -23,6 +23,8 @@ champ_standings = champ_standings.dropna(subset=['Name'])
 champ_standings = champ_standings.sort_values(by='Total', ascending=False)
 
 fastest_laps = import_gsheet("Fastest Laps")
+fastest_laps['Name'] = fastest_laps['Name'].replace('', np.nan)
+fastest_laps = fastest_laps.dropna(subset=['Name'])
 fastest_laps = fastest_laps.sort_values(by='Time', ascending=False)
 
 gkl_logo = Image.open(location + '/inputs/images/gkl_logo.png')
