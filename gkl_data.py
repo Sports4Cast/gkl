@@ -23,6 +23,7 @@ champ_standings = champ_standings.dropna(subset=['Name'])
 champ_standings = champ_standings.sort_values(by='Total', ascending=False)
 
 fastest_laps = import_gsheet("Fastest Laps")
+fastest_laps = fastest_laps.sort_values(by='Time', ascending=False)
 
 gkl_logo = Image.open(location + '/inputs/images/gkl_logo.png')
 rob = Image.open(location + '/inputs/images/rob.png')
@@ -77,7 +78,7 @@ with tab1:
 
     with tab12:
         st.subheader("Fastest Laps")
-        st.dataframe(fastest_laps, hide_index=True)
+        st.dataframe(fastest_laps, height = int(35.2*(fastest_laps.shape[0]+1)), hide_index=True)
 
     with tab13:
         st.subheader("About Silverstone")
