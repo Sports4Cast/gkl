@@ -75,8 +75,6 @@ with tab1:
 
         with col11:           
             st.markdown(silverstone_info)
-            
-        with col12:
             st.image(silverstone_img, width = 800)
 
 
@@ -130,9 +128,9 @@ with tab3:
 
         col11, col12 = st.columns(2)
         with col11: 
-            st.image(rob, width = 400)
-            st.image(antonio, width = 400)
+            st.image(rob, width = 300)
+            st.image(antonio, width = 300)
         with col12: 
-            st.image(paul, width = 400)
-            st.image(ross, width = 400)
+            st.image(paul, width = 300)
+            st.image(ross, width = 300)
         
