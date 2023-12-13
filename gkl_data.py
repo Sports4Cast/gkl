@@ -15,7 +15,7 @@ from inputs.info import info
 location = os.getcwd()
 
 live_race = race_sim()
-live_race = live_race.drop(columns=['Time_secs', 'Distance'])
+live_race = live_race.drop(columns=['Time_secs', 'Distance', 'Kart #'])
 
 champ_standings = import_gsheet("Championship")
 champ_standings['Name'] = champ_standings['Name'].replace('', np.nan)
