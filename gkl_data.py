@@ -22,6 +22,8 @@ champ_standings['Name'] = champ_standings['Name'].replace('', np.nan)
 champ_standings = champ_standings.dropna(subset=['Name'])
 champ_standings = champ_standings.sort_values(by='Total', ascending=False)
 
+fastest_laps = import_gsheet("Fastest Laps")
+
 gkl_logo = Image.open(location + '/inputs/images/gkl_logo.png')
 rob = Image.open(location + '/inputs/images/rob.png')
 ross = Image.open(location + '/inputs/images/ross.png')
@@ -66,12 +68,16 @@ with tab1:
     
     #Live data tab
     with tab11:
-        st.subheader(f"GKL UK Grand Final - Silverstone")
+        st.subheader("GKL UK Grand Final - Silverstone")
         col1, col2 = st.columns(2)
         with col1:
             st.dataframe(live_race, hide_index=True)
         with col2:
             st.markdown(champ_info)
+
+    with tab12:
+        st.subheader("Fastest Laps")
+        st.dataframe(fastest_laps, hide_index=True)
 
     with tab13:
         st.subheader("About Silverstone")
