@@ -24,7 +24,7 @@ def process_row(row):
         row['AdjustedTime'] = row['Time_secs'] + row['RandomTime']
 
         # Add 10 seconds to the adjusted times
-        row['Time_secs'] = row['AdjustedTime'] + 20
+        row['Time_secs'] = row['AdjustedTime'] + 30
 
     return row
 
