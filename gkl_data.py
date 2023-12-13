@@ -42,7 +42,7 @@ st.set_page_config(
     layout = "wide"
 )
 
-st_autorefresh(10 * 1000, limit=1000)
+st_autorefresh(30 * 1000, limit=1000)
 
 st.markdown("""
         <style>
