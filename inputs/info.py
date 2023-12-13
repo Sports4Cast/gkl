@@ -74,5 +74,12 @@ def info():
     Tyres: Mojo D5 Slicks
     '''
 
+    champ_info = '''
+    The National Championship kicks off with the O Plate in February, then runs for 9 Rounds from March to November at Motorsport UK licensed tracks across England and 
+    Wales. These events are for drivers with some level of experience racing on outdoor kart tracks.  
 
-    return about, silverstone_info, bambino, cadet, junior
+    The format for the events include Open Practice sessions on Saturday with driver coaching available, followed by Race Day on Sunday with Official Practice, Qualifying,
+    Pre-Final and Final.  From £165 for practice and £265 for racing.
+    '''
+
+    return about, silverstone_info, bambino, cadet, junior, champ_info

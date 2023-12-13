@@ -33,7 +33,7 @@ silverstone_img = Image.open(location + '/inputs/images/silverstone.png')
 # junior_img = Image.open(location + '/inputs/images/junior.png')
 
 
-about, silverstone_info, bambino_text, cadet_text, junior_text = info()
+about, silverstone_info, bambino_text, cadet_text, junior_text, champ_info = info()
 
 
 # Set up Streamlit app
@@ -67,7 +67,11 @@ with tab1:
     #Live data tab
     with tab11:
         st.subheader(f"GKL UK Grand Final - Silverstone")
-        st.dataframe(live_race, hide_index=True)
+        col1, col2 = st.columns(2)
+        with col1:
+            st.dataframe(live_race, hide_index=True)
+        with col2:
+            st.markdown(champ_info)
 
     with tab13:
         st.subheader("About Silverstone")
